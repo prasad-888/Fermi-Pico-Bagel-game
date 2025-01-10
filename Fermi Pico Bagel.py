@@ -1,10 +1,10 @@
 
 original_number='123'
 
-
+## create infinite while loop
 
 while True:
-    
+   
     guess_number=input('Enter your guess number 3 digits number')
     output=[]
 
@@ -17,7 +17,7 @@ while True:
         continue
 
 
-   
+    
     if guess_number==original_number:
         print('Fermi'*3)
         break
@@ -27,18 +27,14 @@ while True:
     for i in range(len(original_number)):
         if guess_number[i]==original_number[i]:
             output.append('Fermi')
-    for x in guess_number:
-        for y in original_number:
-            if x==y:
-                print('Pico')
+        elif guess_number[i] in original_number:
+            output.append('Pico')
 
 
- 
-    for j in range(len(output)):
-        output_string=[]
-        output_string.append(output[j])    
+   
+    print(' '.join(output))
 
 
-
+   
     if len(output)==0:
         print('Bagel')
